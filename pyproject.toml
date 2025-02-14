@@ -1,46 +1,41 @@
-[build-system]
-requires = ["hatchling","hatch-vcs"]
-build-backend = "hatchling.build"
-
 [project]
 name = "xtts-api-server"
-version = "0.9.0"
-authors = [
-  { name="daswer123", email="daswerq123@gmail.com" },
-]
+version = "0.9.1"
 description = "A simple FastAPI server to host XTTSv2"
+requires-python = "~=3.11"
 readme = "README.md"
-requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-
 dependencies = [
-  "PyAudio==0.2.14",
-  "requests==2.31.0",
-  "pyttsx3==2.90",
-  "stream2sentence==0.2.2",
-  "fastapi>=0.104.1",
-  "loguru",
-  "pydantic",
-  "pydub",
-  "python-dotenv",
-  "torch",
-  "torchaudio",
-  "uvicorn",
-  "cutlet",
-  'fugashi[unidic-lite]',
-  'coqui-tts[languages]==0.24.1',
-  'transformers==4.36.2',
-  "uuid",
-  "spacy==3.7.2",
+    "PyAudio==0.2.14",
+    "requests==2.31.0",
+    "pyttsx3==2.90",
+    "stream2sentence==0.2.2",
+    "fastapi>=0.104.1",
+    "loguru==0.7.2",
+    "pydantic==2.6.1",
+    "pydub==0.25.1",
+    "python-dotenv==1.0.1",
+    "torch==2.2.0",
+    "torchaudio==2.2.0",
+    "uvicorn==0.27.1",
+    "cutlet==0.3.0",
+    "fugashi[unidic-lite]==1.3.0",
+    "coqui-tts[]==0.24.1",
+    "transformers==4.36.2",
+    "uuid",
+    "spacy==3.7.2",
 ]
 
-[project.urls]
-Homepage = "https://github.com/daswer123/xtts-api-server"
-"Bug Tracker" = "https://github.com/daswer123/xtts-api-server/issues"
+[build-system]
+requires = ["hatchling","hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = false
 
 [tool.hatch.build.targets.wheel]
 only-include=["xtts_api_server"]

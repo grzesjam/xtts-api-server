@@ -1,3 +1,10 @@
+# What is this repo?
+
+This is a fork of [daswer123/xtts-api-server](https://github.com/daswer123/xtts-api-server) that 
+just creates a docker image for the project for CPU generation and forces module versions so it actually works.
+
+I'm not planning on maintaining this but who knows...
+
 # A simple FastAPI Server to run XTTSv2
 
 This project is inspired by [silero-api-server](https://github.com/ouoertheo/silero-api-server) and utilizes [XTTSv2](https://github.com/coqui-ai/TTS).
