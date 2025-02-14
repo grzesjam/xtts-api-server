@@ -21,4 +21,4 @@ RUN --mount=type=cache,target=/root/.cache/pip pip install /app/dist/*.whl
 EXPOSE 8020
 
 # Run xtts_api_server when the container starts
-CMD ["bash", "-c", "python3 -m xtts_api_server --listen -p 8020 -t 'http://localhost:8020' -sf 'xtts-server/speakers' -o 'xtts-server/output' -mf 'xtts-server/models'"]
+CMD ["bash", "-c", "python3 -m xtts_api_server --listen -p 8020 -t 'http://localhost:8020' -sf '/xtts-server/speakers' -o '/xtts-server/output' -mf '/xtts-server/models'"]
